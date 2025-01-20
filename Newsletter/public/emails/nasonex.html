@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasonex® - Breathe Freely All Year</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, p, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+     
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            background-color: #f7fdfd;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #01aab8, #018894);
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .header-overlay {
+            background: rgba(1, 170, 184, 0.92);
+            padding: 50px 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mint-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?auto=format&fit=crop&w=400&q=80');
+            background-size: cover;
+            opacity: 0.12;
+            z-index: 1;
+            transform: scale(1.1);
+            filter: blur(2px);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 3;
+            max-width: 85%;
+            text-align: left;
+        }
+
+        .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ffffff, #e0f7fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-type {
+            font-family: 'Montserrat', sans-serif;
+            color: #e0f7fa;
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .header-tagline {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.4;
+            max-width: 90%;
+            position: relative;
+            padding-left: 15px;
+            border-left: 3px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-section {
+            display: flex;
+            background: #f7fdfd;
+            padding: 40px 30px;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(1, 170, 184, 0.1);
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .benefits-list {
+            background: linear-gradient(145deg, #ffffff, #f7fdfd);
+            border: 1px solid rgba(1, 170, 184, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .benefits-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(1, 170, 184, 0.05);
+            border-radius: 8px;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            color: #01aab8;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .product-highlight {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: linear-gradient(to right, #f7fdfd, #edfbfc);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .product-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(1, 170, 184, 0.1);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #f7fdfd, #edfbfc);
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #01aab8;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(1, 170, 184, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(1, 170, 184, 0.3);
+        }
+
+        .footer {
+            background-color: #f7fdfd;
+            padding: 30px;
+            font-size: 13px;
+            color: #666;
+            border-top: 1px solid rgba(1, 170, 184, 0.1);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .header-content {
+                max-width: 100%;
+            }
+
+            .brand-name {
+                font-size: 36px;
+            }
+
+            .product-type {
+                font-size: 20px;
+            }
+
+            .header-tagline {
+                font-size: 18px;
+            }
+
+            .hero-section {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+
+            .hero-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .product-highlight {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mint-pattern"></div>
+       
+            <div class="header-overlay">
+                <div class="header-content">
+                    <h1 class="brand-name">Nasonex®</h1>
+                    <h2 class="product-type">Nasal Spray</h2>
+                    <p class="header-tagline">Breathe Freely All Year with Nasonex® Your Solution for Nasal Allergy Relief</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2 style="color: #01aab8; font-size: 32px; margin-bottom: 20px;">Say Goodbye to a stuffy nose!</h2>
+                <p style="font-size: 18px; line-height: 1.8; color: #445566;">
+                    Feel the difference with each gentle spray and enjoy clear, comfortable breathing every day!
+                </p>
+            </div>
+            <img 
+                src="../public/man.png" 
+                alt="Person enjoying nature with clear breathing" 
+                class="hero-image"
+            />
+        </div>
+
+        <div class="content">
+            <div class="benefits-list">
+                <h3 style="color: #01aab8; font-size: 24px; margin-bottom: 20px;">Nasonex® provides powerful relief for:</h3>
+                <ul>
+                    <li>Seasonal allergies like hay fever</li>
+                    <li>Year-round allergies caused by dust, pets, and more</li>
+                    <li>Nasal polyps in adults</li>
+                </ul>
+            </div>
+
+            <div class="product-highlight">
+                <img 
+                    src="../public/nasonex.png" 
+                    alt="Nasonex Product" 
+                    class="product-image"
+                />
+                <div>
+                    <h3 style="color: #01aab8; font-size: 24px; margin-bottom: 15px;">Your go-to solution for lasting relief!</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0;">✓ Suitable for adults and children aged 3 and up</li>
+                        <li style="margin: 10px 0;">✓ Clinically proven effectiveness</li>
+                        <li style="margin: 10px 0;">✓ Easy-to-use nasal spray for targeted relief</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2 style="color: #01aab8; font-size: 32px; margin-bottom: 20px;">Don't let nasal allergies hold you back</h2>
+                <p style="margin-bottom: 30px; font-size: 18px; color: #445566;">
+                    With Nasonex, every breath is a breath of fresh air. Try it now!
+                </p>
+                <a href="#" class="cta-button">Learn More and Get Relief Today</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p style="margin-bottom: 15px;">Important Safety Information: Always read the label and follow the instructions. If symptoms persist, consult your healthcare professional.</p>
+            <p>© 2025 All rights reserved. NASONEX® is a registered trademark.</p>
+        </div>
+    </div>
+</body>
+</html>
